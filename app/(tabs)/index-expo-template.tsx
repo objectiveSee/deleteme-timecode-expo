@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native'
 
-import EditScreenInfo from '@/components/EditScreenInfo'
-import { Text, View } from '@/components/Themed'
-import { Timer } from '@/components/Timer'
+import EditScreenInfo from '@/src/EditScreenInfo'
+import { Text, View } from '@/src/Themed'
+import { Timer } from '@/src/Timer'
 
 const startDate = new Date()
 

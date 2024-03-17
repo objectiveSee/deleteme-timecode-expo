@@ -3,8 +3,8 @@ import { Link, Tabs } from 'expo-router'
 import React from 'react'
 import { Pressable } from 'react-native'
 
-import { useClientOnlyValue } from '@/components/useClientOnlyValue'
-import { useColorScheme } from '@/components/useColorScheme'
+import { useClientOnlyValue } from '@/src/useClientOnlyValue'
+import { useColorScheme } from '@/src/useColorScheme'
 import Colors from '@/constants/Colors'
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/

@@ -1,6 +1,6 @@
-import { useNote, Code } from '@/components/hooks/useNote';
-import { NoteTextItem } from '@/components/NoteTextItem';
-import { Timer } from '@/components/Timer';
+import { useNote, Code } from '@/src/hooks/useNote';
+import { NoteTextItem } from '@/src/NoteTextItem';
+import { Timer } from '@/src/Timer';
 import React, { useRef } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 
