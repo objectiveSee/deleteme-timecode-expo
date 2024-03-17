@@ -17,7 +17,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'import',
-        // 'unused-imports',    // TODO
+        'unused-imports',
         'react-hooks'
     ],
     rules: {
@@ -88,7 +88,8 @@ module.exports = {
     settings: {
         'import/resolver': {
             typescript: {
-            project: './tsconfig.json'
+                alwaysTryTypes: true,
+                project: './tsconfig.json'
             },
         }
     }
