@@ -5,13 +5,15 @@ import { useTimerFormatted } from './hooks/useTimer'
 
 const styles = StyleSheet.create({
   timerText: {
-    fontSize: 24,
+    fontSize: 40,
     textAlign: 'left',
-    width: '100%',
+    flex: 1,
+    paddingLeft: 100,
     backgroundColor: 'rgba(0, 0, 0, 0.1)'
   },
   pressable: {
-    width: '100%'
+    width: '100%',
+    height: 50,
   }
 })
 

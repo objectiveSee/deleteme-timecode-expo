@@ -18,7 +18,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "us.theredb.timecode",
-      "buildNumber": "24",
+      "buildNumber": "26",
       "config": {
         "usesNonExemptEncryption": false
       },
