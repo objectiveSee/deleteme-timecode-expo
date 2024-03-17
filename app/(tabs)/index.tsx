@@ -11,7 +11,7 @@ export default function TabOneScreen () {
 
   const addNewItem = () => {
     console.log('add new item')
-    addCode({ text: 'new item', date: new Date() })
+    addCode({ text: '', date: new Date() })
   }
 
   const renderItem = ({ item }: { item: Code }) => {
@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
   list: {
     width: '100%',
     flex: 1,
-    backgroundColor: 'rgba(0, 255, 0, 0.1)'
+    backgroundColor: 'rgba(255, 255, 0, 1.0)'
   }
 })

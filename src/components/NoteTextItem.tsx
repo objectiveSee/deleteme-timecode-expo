@@ -1,22 +1,47 @@
-import React, { useState } from 'react'
-import { Text, TextInput, View } from 'react-native'
+import React, { useMemo, useState } from 'react'
+import { StyleSheet, Text, TextInput, View } from 'react-native'
+
+import { formatTime } from '../utilities/date'
 
 export const NoteTextItem = ({ text, date }: { text: string, date: string }) => {
   const [noteText, setNoteText] = useState(text)
+  const displayDate = useMemo(() => {
+    const dateToMs = Date.parse(date)
+    return formatTime(dateToMs)
+  }, [date])
 
   return (
-    <View style={{ width: '100%' }}>
-      <Text style={{ backgroundColor: 'rgba(0, 0, 255, 0.1)', padding: 10 }}>
-        {date}
-      </Text>
+    <View style={styles.container}>
+      <View style={styles.dateColumn}>
+        <Text style={styles.dateText}>{displayDate}</Text>
+      </View>
       <TextInput
-        style={{ width: '100%', backgroundColor: 'rgba(255, 0, 0, 0.1)', padding: 10 }}
+        style={styles.input}
         multiline={true}
         editable={true}
         value={noteText}
         onChangeText={setNoteText}
-        blurOnSubmit={true} // This should ensure the keyboard is dismissed when the return key is pressed in a multiline TextInput
+        blurOnSubmit={true}
       />
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    width: '100%'
+  },
+  dateColumn: {
+    width: 100,
+    backgroundColor: 'rgba(255, 255, 255, 1.0)'
+  },
+  dateText: {
+    padding: 10
+  },
+  input: {
+    flex: 1,
+    backgroundColor: 'rgba(200,200,200,1)',
+    padding: 10
+  }
+})
