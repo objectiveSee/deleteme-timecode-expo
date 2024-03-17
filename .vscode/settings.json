@@ -1,4 +1,19 @@
 {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    },
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,   // optional
+    "editor.formatOnType": false,   // optional
+    "editor.formatOnSaveMode": "file",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 2, // Or your preferred indentation size
+        "editor.insertSpaces": true
+      },
+    "files.autoSave": "onFocusChange",  // optional, but recommended
+    "vs-code-prettier-eslint.prettierLast": false,  // set to true to run Prettier last
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#e09a94",
         "activityBar.background": "#e09a94",

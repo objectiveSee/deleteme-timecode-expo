@@ -1,0 +1,33 @@
+{
+    "cli": {
+      "version": ">= 2.1.0",
+      "promptToConfigurePushNotifications": false
+    },
+    "build": {
+      /** Base Configurations */
+      "internal": {
+        "distribution": "internal"
+      },
+      "store": {
+        "distribution": "store"
+      },
+      "development": {
+        "developmentClient": true,
+        "distribution": "internal"
+      },
+      "production": {
+        "extends": "store",
+        "autoIncrement": true
+      }
+    },
+    "submit": {
+      "production": {
+        "ios": {
+          "ascAppId": "590534084",
+          "appleId": "dan.ricciotti@gmail.com",
+          "appleTeamId": "3MM7WZ83N9"
+        }
+      }
+    }
+  }
+  
