@@ -1,0 +1,37 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    },
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,   // optional
+    "editor.formatOnType": false,   // optional
+    "editor.formatOnSaveMode": "file",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 2, // Or your preferred indentation size
+        "editor.insertSpaces": true
+      },
+    "files.autoSave": "onFocusChange",  // optional, but recommended
+    "vs-code-prettier-eslint.prettierLast": false,  // set to true to run Prettier last
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#e09a94",
+        "activityBar.background": "#e09a94",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#e6f8e8",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#e09a94",
+        "statusBar.background": "#d5746c",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#ca4e44",
+        "statusBarItem.remoteBackground": "#d5746c",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#d5746c",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#d5746c99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#d5746c"
+}

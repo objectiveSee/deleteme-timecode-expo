@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "timecode-expo",
-    "slug": "timecode-expo",
-    "version": "1.0.0",
+    "name": "timecode",
+    "slug": "timecode",
+    "version": "4.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -16,7 +16,19 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "us.theredb.timecode",
+      "buildNumber": "24",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "mailto",
+          "http",
+          "https"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -34,6 +46,15 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "owner": "starship-studios",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "49a31c85-b6e6-4f7b-b5a3-6ed36fd52010"
+      }
     }
   }
 }
