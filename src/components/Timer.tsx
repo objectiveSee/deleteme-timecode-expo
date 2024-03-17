@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
 
-import { useTimerFormatted } from './hooks/useTimer'
+import { useTimerFormatted } from '../hooks/useTimer'
 
 const styles = StyleSheet.create({
   timerText: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   pressable: {
     width: '100%',
-    height: 50,
+    height: 50
   }
 })
 

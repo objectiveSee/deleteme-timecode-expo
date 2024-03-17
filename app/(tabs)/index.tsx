@@ -1,17 +1,17 @@
-import { useNote, Code } from '@/src/hooks/useNote';
-import { NoteTextItem } from '@/src/NoteTextItem';
-import { Timer } from '@/src/Timer';
-import React, { useRef } from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import React, { useRef } from 'react'
+import { FlatList, StyleSheet, View } from 'react-native'
 
-export default function TabOneScreen() {
+import { NoteTextItem } from '@/src/components/NoteTextItem'
+import { Timer } from '@/src/components/Timer'
+import { type Code, useNote } from '@/src/hooks/useNote'
 
-  const startDateRef = useRef(new Date());
-  const { note, addCode } = useNote();
+export default function TabOneScreen () {
+  const startDateRef = useRef(new Date())
+  const { note, addCode } = useNote()
 
   const addNewItem = () => {
-    console.log('add new item');
-    addCode({ text: 'new item', date: new Date() });
+    console.log('add new item')
+    addCode({ text: 'new item', date: new Date() })
   }
 
   const renderItem = ({ item }: { item: Code }) => {
@@ -23,7 +23,7 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Timer startDate={startDateRef.current} onPress={addNewItem} />
-      <FlatList 
+      <FlatList
         style={styles.list}
         data={note.codes}
         renderItem={renderItem}
@@ -35,11 +35,11 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   list: {
     width: '100%',
     flex: 1,
-    backgroundColor: 'rgba(0, 255, 0, 0.1)',
-  },
-});
+    backgroundColor: 'rgba(0, 255, 0, 0.1)'
+  }
+})
