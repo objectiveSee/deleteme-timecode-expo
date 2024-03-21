@@ -1,14 +1,33 @@
-import { StyleSheet } from 'react-native'
+import React, { useRef } from 'react'
+import { FlatList, StyleSheet, View } from 'react-native'
 
-import EditScreenInfo from '@/components/EditScreenInfo'
-import { Text, View } from '@/components/Themed'
+import { NoteTextItem } from '@/src/components/NoteTextItem'
+import { Timer } from '@/src/components/Timer'
+import { type Code, useNote } from '@/src/hooks/useNote'
 
 export default function TabOneScreen () {
+  const startDateRef = useRef(new Date())
+  const { note, addCode } = useNote()
+
+  const addNewItem = () => {
+    console.log('add new item')
+    addCode({ text: '', date: new Date() })
+  }
+
+  const renderItem = ({ item }: { item: Code }) => {
+    return (
+      <NoteTextItem text={item.text} date={item.date.toISOString()} />
+    )
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <Timer startDate={startDateRef.current} onPress={addNewItem} />
+      <FlatList
+        style={styles.list}
+        data={note.codes}
+        renderItem={renderItem}
+      />
     </View>
   )
 }
@@ -16,16 +35,11 @@ export default function TabOneScreen () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: 'center'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%'
+  list: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 0, 1.0)'
   }
 })

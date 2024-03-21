@@ -3,9 +3,9 @@ import { Link, Tabs } from 'expo-router'
 import React from 'react'
 import { Pressable } from 'react-native'
 
-import { useClientOnlyValue } from '@/components/useClientOnlyValue'
-import { useColorScheme } from '@/components/useColorScheme'
 import Colors from '@/constants/Colors'
+import { useClientOnlyValue } from '@/src/hooks/useClientOnlyValue'
+import { useColorScheme } from '@/src/hooks/useColorScheme'
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon (props: {
@@ -29,8 +29,8 @@ export default function TabLayout () {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Timecode',
+          tabBarIcon: ({ color }) => <TabBarIcon name="bars" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -48,9 +48,9 @@ export default function TabLayout () {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="Settings"
         options={{
-          title: 'Tab Two',
+          title: 'Settings',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />
         }}
       />
